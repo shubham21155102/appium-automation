@@ -1,0 +1,1302 @@
+[
+  {
+    "index": 0,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 1,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 2,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 3,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/action_bar_root",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 4,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": "android:id/content",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 5,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/root_view",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 6,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.view.View",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 7,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 0
+    },
+    "size": {
+      "width": 1080,
+      "height": 2309
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/main_container",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 8,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2210
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 9,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2210
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 10,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2210
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversation_list_view_host",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 11,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "android:id/content",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 12,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/pager_holder",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 13,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/pager",
+      "class": "androidx.viewpager.widget.ViewPager",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "true"
+    }
+  },
+  {
+    "index": 14,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "android:id/content",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 15,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.view.ViewGroup",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 16,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversation_container",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 17,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 99
+    },
+    "size": {
+      "width": 1080,
+      "height": 2080
+    },
+    "attributes": {
+      "resource-id": "android:id/list",
+      "class": "androidx.recyclerview.widget.RecyclerView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "true"
+    }
+  },
+  {
+    "index": 18,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 253
+    },
+    "size": {
+      "width": 1080,
+      "height": 165
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 19,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 253
+    },
+    "size": {
+      "width": 1080,
+      "height": 165
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/my_search_bar",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 20,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 33,
+      "y": 264
+    },
+    "size": {
+      "width": 1014,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/search_bar_inner_layout",
+      "class": "androidx.appcompat.widget.LinearLayoutCompat",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 21,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 66,
+      "y": 275
+    },
+    "size": {
+      "width": 110,
+      "height": 110
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/search_icon",
+      "class": "android.widget.ImageView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 22,
+    "tagName": "",
+    "text": "Ask Meta AI or Search",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 176,
+      "y": 300
+    },
+    "size": {
+      "width": 871,
+      "height": 59
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/search_text",
+      "class": "android.widget.TextView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 23,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 418
+    },
+    "size": {
+      "width": 1080,
+      "height": 22
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 24,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 418
+    },
+    "size": {
+      "width": 1080,
+      "height": 22
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 25,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 26,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 27,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversations_swipe_to_reveal_container",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 28,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversations_swipe_to_reveal_header_combo",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 29,
+    "tagName": "Inbox filters, Radio Group",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "Inbox filters, Radio Group",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 30,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 440
+    },
+    "size": {
+      "width": 1080,
+      "height": 154
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversations_swipe_to_reveal_filter_recycler_view",
+      "class": "androidx.recyclerview.widget.RecyclerView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "true"
+    }
+  },
+  {
+    "index": 31,
+    "tagName": "All filter, , selected",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 44,
+      "y": 440
+    },
+    "size": {
+      "width": 134,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.RadioButton",
+      "package": "com.whatsapp",
+      "content-desc": "All filter, , selected",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 32,
+    "tagName": "Unread filter, , unselected",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 194,
+      "y": 440
+    },
+    "size": {
+      "width": 214,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.RadioButton",
+      "package": "com.whatsapp",
+      "content-desc": "Unread filter, , unselected",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 33,
+    "tagName": "Favorites filter, , unselected",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 424,
+      "y": 440
+    },
+    "size": {
+      "width": 248,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.RadioButton",
+      "package": "com.whatsapp",
+      "content-desc": "Favorites filter, , unselected",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 34,
+    "tagName": "Groups filter, , unselected",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 688,
+      "y": 440
+    },
+    "size": {
+      "width": 215,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.RadioButton",
+      "package": "com.whatsapp",
+      "content-desc": "Groups filter, , unselected",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 35,
+    "tagName": "IIT BHU MIN filter, , unselected",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 919,
+      "y": 440
+    },
+    "size": {
+      "width": 161,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.RadioButton",
+      "package": "com.whatsapp",
+      "content-desc": "IIT BHU MIN filter, , unselected",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 36,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 594
+    },
+    "size": {
+      "width": 1080,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 37,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 594
+    },
+    "size": {
+      "width": 1080,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 38,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 594
+    },
+    "size": {
+      "width": 1080,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversations_archive_header",
+      "class": "android.widget.Button",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 39,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 594
+    },
+    "size": {
+      "width": 198,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/archived_row_image",
+      "class": "android.widget.ImageView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 40,
+    "tagName": "",
+    "text": "Archived",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 198,
+      "y": 594
+    },
+    "size": {
+      "width": 178,
+      "height": 132
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/archived_row",
+      "class": "android.widget.TextView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 41,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 376,
+      "y": 631
+    },
+    "size": {
+      "width": 660,
+      "height": 58
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/content_indicator_container",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 42,
+    "tagName": "",
+    "text": "2",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 978,
+      "y": 631
+    },
+    "size": {
+      "width": 58,
+      "height": 58
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/archive_row_counter",
+      "class": "android.widget.TextView",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 43,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 726
+    },
+    "size": {
+      "width": 1080,
+      "height": 209
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/contact_row_container",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 44,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 737
+    },
+    "size": {
+      "width": 198,
+      "height": 187
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/row_addon_start",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 45,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 0,
+      "y": 737
+    },
+    "size": {
+      "width": 198,
+      "height": 187
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/contact_selector",
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 46,
+    "tagName": "Bangalore FTE : IIT BHU '25 picture",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 27,
+      "y": 759
+    },
+    "size": {
+      "width": 143,
+      "height": 143
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/contact_photo",
+      "class": "android.widget.ImageView",
+      "package": "com.whatsapp",
+      "content-desc": "Bangalore FTE : IIT BHU '25 picture",
+      "checkable": "false",
+      "clickable": "true",
+      "enabled": "true",
+      "focusable": "true",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 47,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 198,
+      "y": 767
+    },
+    "size": {
+      "width": 838,
+      "height": 127
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/row_content",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 48,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 198,
+      "y": 767
+    },
+    "size": {
+      "width": 838,
+      "height": 59
+    },
+    "attributes": {
+      "resource-id": "com.whatsapp:id/conversations_row_header",
+      "class": "android.widget.LinearLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  },
+  {
+    "index": 49,
+    "tagName": "",
+    "text": "",
+    "isDisplayed": true,
+    "isEnabled": true,
+    "location": {
+      "x": 198,
+      "y": 767
+    },
+    "size": {
+      "width": 680,
+      "height": 59
+    },
+    "attributes": {
+      "resource-id": null,
+      "class": "android.widget.FrameLayout",
+      "package": "com.whatsapp",
+      "content-desc": "",
+      "checkable": "false",
+      "clickable": "false",
+      "enabled": "true",
+      "focusable": "false",
+      "scrollable": "false"
+    }
+  }
+]
