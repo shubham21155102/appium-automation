@@ -1,0 +1,418 @@
+[
+  {
+    "index": 0,
+    "elementId": "00000000-0000-0637-ffff-ffff00000015",
+    "text": "Where is my Train",
+    "isDisplayed": true,
+    "location": {
+      "x": 198,
+      "y": 136
+    },
+    "size": {
+      "width": 466,
+      "height": 80
+    },
+    "resourceId": "",
+    "contentDesc": ""
+  },
+  {
+    "index": 1,
+    "elementId": "00000000-0000-0637-0000-000e00000052",
+    "text": "EXPRESS",
+    "isDisplayed": true,
+    "location": {
+      "x": 197,
+      "y": 303
+    },
+    "size": {
+      "width": 197,
+      "height": 60
+    },
+    "resourceId": "",
+    "contentDesc": "EXPRESS"
+  },
+  {
+    "index": 2,
+    "elementId": "00000000-0000-0637-0000-001100000052",
+    "text": "METRO",
+    "isDisplayed": true,
+    "location": {
+      "x": 708,
+      "y": 303
+    },
+    "size": {
+      "width": 155,
+      "height": 60
+    },
+    "resourceId": "",
+    "contentDesc": "METRO"
+  },
+  {
+    "index": 3,
+    "elementId": "00000000-0000-0637-0000-006800000052",
+    "text": "KOTA",
+    "isDisplayed": true,
+    "location": {
+      "x": 157,
+      "y": 491
+    },
+    "size": {
+      "width": 99,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "KOTA"
+  },
+  {
+    "index": 4,
+    "elementId": "00000000-0000-0637-0000-006a00000052",
+    "text": "ADI",
+    "isDisplayed": true,
+    "location": {
+      "x": 157,
+      "y": 702
+    },
+    "size": {
+      "width": 66,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "ADI"
+  },
+  {
+    "index": 5,
+    "elementId": "00000000-0000-0637-0000-004300000052",
+    "text": "Find trains",
+    "isDisplayed": true,
+    "location": {
+      "x": 404,
+      "y": 834
+    },
+    "size": {
+      "width": 273,
+      "height": 68
+    },
+    "resourceId": "",
+    "contentDesc": "Find trains"
+  },
+  {
+    "index": 6,
+    "elementId": "00000000-0000-0637-0000-006c00000052",
+    "text": "04154",
+    "isDisplayed": true,
+    "location": {
+      "x": 55,
+      "y": 1047
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "04154"
+  },
+  {
+    "index": 7,
+    "elementId": "00000000-0000-0637-0000-006f00000052",
+    "text": "DDU",
+    "isDisplayed": true,
+    "location": {
+      "x": 55,
+      "y": 1246
+    },
+    "size": {
+      "width": 84,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "DDU"
+  },
+  {
+    "index": 8,
+    "elementId": "00000000-0000-0637-0000-007200000052",
+    "text": "SEARCH HISTORY",
+    "isDisplayed": true,
+    "location": {
+      "x": 44,
+      "y": 1416
+    },
+    "size": {
+      "width": 992,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "SEARCH HISTORY"
+  },
+  {
+    "index": 9,
+    "elementId": "00000000-0000-0637-0000-007800000052",
+    "text": "12476",
+    "isDisplayed": true,
+    "location": {
+      "x": 50,
+      "y": 1531
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "12476"
+  },
+  {
+    "index": 10,
+    "elementId": "00000000-0000-0637-0000-007900000052",
+    "text": "Hapa SF Express",
+    "isDisplayed": true,
+    "location": {
+      "x": 187,
+      "y": 1531
+    },
+    "size": {
+      "width": 436,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "Hapa SF Express"
+  },
+  {
+    "index": 11,
+    "elementId": "00000000-0000-0637-0000-007b00000052",
+    "text": "KOTA - ADI",
+    "isDisplayed": true,
+    "location": {
+      "x": 752,
+      "y": 1531
+    },
+    "size": {
+      "width": 201,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "KOTA - ADI"
+  },
+  {
+    "index": 12,
+    "elementId": "00000000-0000-0637-0000-008100000052",
+    "text": "12948",
+    "isDisplayed": true,
+    "location": {
+      "x": 50,
+      "y": 1666
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "12948"
+  },
+  {
+    "index": 13,
+    "elementId": "00000000-0000-0637-0000-008200000052",
+    "text": "Azimabad SF Express",
+    "isDisplayed": true,
+    "location": {
+      "x": 187,
+      "y": 1666
+    },
+    "size": {
+      "width": 434,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "Azimabad SF Express"
+  },
+  {
+    "index": 14,
+    "elementId": "00000000-0000-0637-0000-008400000052",
+    "text": "PNBE - ADI",
+    "isDisplayed": true,
+    "location": {
+      "x": 750,
+      "y": 1666
+    },
+    "size": {
+      "width": 203,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "PNBE - ADI"
+  },
+  {
+    "index": 15,
+    "elementId": "00000000-0000-0637-0000-008a00000052",
+    "text": "12218",
+    "isDisplayed": true,
+    "location": {
+      "x": 50,
+      "y": 1801
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "12218"
+  },
+  {
+    "index": 16,
+    "elementId": "00000000-0000-0637-0000-008b00000052",
+    "text": "Kerala Sampark Kranti Express",
+    "isDisplayed": true,
+    "location": {
+      "x": 187,
+      "y": 1801
+    },
+    "size": {
+      "width": 408,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "Kerala Sampark Kranti Express"
+  },
+  {
+    "index": 17,
+    "elementId": "00000000-0000-0637-0000-008d00000052",
+    "text": "NDLS - KOTA",
+    "isDisplayed": true,
+    "location": {
+      "x": 718,
+      "y": 1801
+    },
+    "size": {
+      "width": 235,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "NDLS - KOTA"
+  },
+  {
+    "index": 18,
+    "elementId": "00000000-0000-0637-0000-009300000052",
+    "text": "04154",
+    "isDisplayed": true,
+    "location": {
+      "x": 50,
+      "y": 1936
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "04154"
+  },
+  {
+    "index": 19,
+    "elementId": "00000000-0000-0637-0000-009400000052",
+    "text": "Kanpur Central Special Fare SF Summer Special",
+    "isDisplayed": true,
+    "location": {
+      "x": 187,
+      "y": 1936
+    },
+    "size": {
+      "width": 417,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "Kanpur Central Special Fare SF Summer Special"
+  },
+  {
+    "index": 20,
+    "elementId": "00000000-0000-0637-0000-009600000052",
+    "text": "KOAA - CNB",
+    "isDisplayed": true,
+    "location": {
+      "x": 729,
+      "y": 1936
+    },
+    "size": {
+      "width": 224,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "KOAA - CNB"
+  },
+  {
+    "index": 21,
+    "elementId": "00000000-0000-0637-0000-009c00000052",
+    "text": "03310",
+    "isDisplayed": true,
+    "location": {
+      "x": 50,
+      "y": 2071
+    },
+    "size": {
+      "width": 115,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "03310"
+  },
+  {
+    "index": 22,
+    "elementId": "00000000-0000-0637-0000-009d00000052",
+    "text": "Dhanbad Special Fare Garib Rath Special",
+    "isDisplayed": true,
+    "location": {
+      "x": 187,
+      "y": 2071
+    },
+    "size": {
+      "width": 452,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "Dhanbad Special Fare Garib Rath Special"
+  },
+  {
+    "index": 23,
+    "elementId": "00000000-0000-0637-0000-009f00000052",
+    "text": "JAT - DHN",
+    "isDisplayed": true,
+    "location": {
+      "x": 771,
+      "y": 2071
+    },
+    "size": {
+      "width": 182,
+      "height": 53
+    },
+    "resourceId": "",
+    "contentDesc": "JAT - DHN"
+  },
+  {
+    "index": 24,
+    "elementId": "00000000-0000-0637-0000-006100000052",
+    "text": "PNR",
+    "isDisplayed": true,
+    "location": {
+      "x": 254,
+      "y": 2307
+    },
+    "size": {
+      "width": 91,
+      "height": 2
+    },
+    "resourceId": "",
+    "contentDesc": "PNR"
+  },
+  {
+    "index": 25,
+    "elementId": "00000000-0000-0637-0000-006600000052",
+    "text": "TICKETS",
+    "isDisplayed": true,
+    "location": {
+      "x": 753,
+      "y": 2307
+    },
+    "size": {
+      "width": 176,
+      "height": 2
+    },
+    "resourceId": "",
+    "contentDesc": "TICKETS"
+  }
+]
