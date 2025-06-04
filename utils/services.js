@@ -268,6 +268,116 @@ async function enterTextInField(driver, fieldIdentifier, text, isResourceId = fa
     }
 }
 
+async function handleStationSelection(driver, stationCode, isSource = true) {
+    try {
+        const stationType = isSource ? 'source' : 'destination';
+        console.log(`Handling ${stationType} station selection: ${stationCode}`);
+        
+        // First check if there's already a selection screen showing
+        const waitTime = 2000;
+        await driver.pause(waitTime);
+        
+        // Look for a text input field
+        const inputField = await driver.$('//android.widget.EditText');
+        if (await inputField.isExisting()) {
+            await inputField.clearValue();
+            await driver.pause(500);
+            await inputField.setValue(stationCode);
+            console.log(`Entered ${stationCode} in ${stationType} field`);
+            await driver.pause(1500); // Wait for suggestions to appear
+        } else {
+            console.log(`No input field found for ${stationType} station`);
+            return false;
+        }
+        
+        // Take a screenshot of the suggestions
+        await takeScreenshot(driver, `${stationType}_suggestions`);
+        
+        // Try to find and click on a suggestion that contains the station code
+        // First try exact match with station code
+        const stationExact = await driver.$(`//android.widget.TextView[contains(@text, "${stationCode}") and not(contains(@text, "No stations"))]`);
+        if (await stationExact.isExisting() && await stationExact.isDisplayed()) {
+            await stationExact.click();
+            console.log(`Selected station ${stationCode} from dropdown`);
+            await driver.pause(1500); // Wait for navigation after selection
+            
+            // Check if we need to handle any popups
+            await handlePopups(driver);
+            return true;
+        }
+        
+        // Try broader match if exact match fails
+        const stationOptions = await driver.$$('//android.widget.TextView');
+        for (const option of stationOptions) {
+            const text = await option.getText();
+            if (text && text.includes(stationCode)) {
+                await option.click();
+                console.log(`Selected station suggestion: ${text}`);
+                await driver.pause(1500);
+                
+                // Check if we need to handle any popups
+                await handlePopups(driver);
+                return true;
+            }
+        }
+        
+        console.log(`No matching suggestion found for station ${stationCode}`);
+        return false;
+    } catch (error) {
+        console.error(`Error in station selection for ${stationCode}:`, error.message);
+        return false;
+    }
+}
+
+async function handlePopups(driver) {
+    try {
+        // Check for warning/error popups
+        const possiblePopupTexts = ['Warning', 'Error', 'Please select', 'Invalid', 'Not found', 'OK', 'RETRY', 'CANCEL'];
+        
+        for (const popupText of possiblePopupTexts) {
+            const popupElement = await driver.$(`//android.widget.TextView[contains(@text, "${popupText}")]`);
+            if (await popupElement.isExisting() && await popupElement.isDisplayed()) {
+                console.log(`Found popup with text: ${popupText}`);
+                await takeScreenshot(driver, 'popup_detected');
+                
+                // Find and click OK or dismiss button
+                const okButton = await driver.$('//android.widget.Button[@text="OK" or @text="Ok" or @text="ok"]');
+                if (await okButton.isExisting()) {
+                    await okButton.click();
+                    console.log('Clicked OK button on popup');
+                    await driver.pause(1000);
+                    return true;
+                }
+                
+                // Try clicking on any button in the popup
+                const buttons = await driver.$$('//android.widget.Button');
+                if (buttons.length > 0) {
+                    for (const button of buttons) {
+                        const isDisplayed = await button.isDisplayed();
+                        if (isDisplayed) {
+                            await button.click();
+                            console.log('Clicked button in popup');
+                            await driver.pause(1000);
+                            return true;
+                        }
+                    }
+                }
+                
+                // If no buttons found but there is a popup, try tapping back
+                await driver.back();
+                console.log('Pressed back button to dismiss popup');
+                await driver.pause(1000);
+                return true;
+            }
+        }
+        
+        return false; // No popup found
+    } catch (error) {
+        console.error('Error handling popup:', error.message);
+        return false;
+    }
+}
+
 module.exports = {
     takeScreenshot,
     getCompletePageStructure,
@@ -278,5 +388,7 @@ module.exports = {
     getTextElementsWithDetails,
     clickElementByText,
     findElementByResourceId,
-    enterTextInField
+    enterTextInField,
+    handleStationSelection,
+    handlePopups
 };

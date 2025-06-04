@@ -4,7 +4,9 @@ const {
     getCapabilities, 
     clickElementByText,
     enterTextInField,
-    findElementByResourceId 
+    findElementByResourceId,
+    handleStationSelection,
+    handlePopups 
 } = require('./utils/services');
 
 const appPackage = 'com.whereismytrain.android';
@@ -42,139 +44,201 @@ async function searchTrain(sourceStation = 'NDLS', destinationStation = 'PNBE') 
             await driver.pause(2000);
             await takeScreenshot(driver, 'after_find_trains_click');
             
-            // Enter source station (based on our inspection, it appears as ADI - Ahmedabad Junction)
+            // Enter source station (using our new station selection handler)
             console.log('Entering source station...');
-            // First try clicking on the source station element if it's already visible
-            console.log('Looking for source field or station text...');
+            let sourceSelected = false;
             
             try {
-                // Try to find the source station element (currently showing "ADI")
-                const sourceStationText = await driver.$('//android.widget.TextView[@text="ADI"]');
-                if (await sourceStationText.isExisting() && await sourceStationText.isDisplayed()) {
-                    await sourceStationText.click();
-                    console.log('Clicked on source station text (ADI)');
-                    await driver.pause(1500);
-                    
-                    // Now try to find input field
-                    const sourceInputField = await driver.$('//android.widget.EditText');
-                    if (await sourceInputField.isExisting()) {
-                        await sourceInputField.clearValue();
-                        await driver.pause(500);
-                        await sourceInputField.setValue(sourceStation);
-                        console.log(`Entered source: ${sourceStation}`);
+                // Take a screenshot before starting source selection
+                await takeScreenshot(driver, 'before_source_selection');
+                
+                // First try to locate and click on the existing source station field (currently "ADI")
+                const sourceFields = [
+                    '//android.widget.TextView[@text="ADI"]',
+                    '//android.widget.TextView[contains(@text, "From")]',
+                    '//android.widget.TextView[contains(@content-desc, "From")]',
+                    '//android.widget.TextView[contains(@text, "Source")]'
+                ];
+                
+                for (const sourceXPath of sourceFields) {
+                    const sourceElement = await driver.$(sourceXPath);
+                    if (await sourceElement.isExisting() && await sourceElement.isDisplayed()) {
+                        await sourceElement.click();
+                        console.log(`Clicked on source field: ${sourceXPath}`);
                         await driver.pause(1500);
                         
-                        // Try to select from suggestions
-                        const sourceSelection = await driver.$(`//android.widget.TextView[contains(@text, "${sourceStation}")]`);
-                        if (await sourceSelection.isExisting()) {
-                            await sourceSelection.click();
-                            console.log('Selected source from suggestions');
-                            await driver.pause(1000);
+                        // Use our new station selection handler
+                        sourceSelected = await handleStationSelection(driver, sourceStation, true);
+                        
+                        if (sourceSelected) {
+                            console.log('Source station selected successfully');
+                            break;
                         }
                     }
-                } else {
-                    // Try alternative approaches if direct element not found
-                    console.log('Source station text not found, trying alternative approach');
-                    const sourceField = await driver.$('//android.widget.EditText[contains(@resource-id, "source") or contains(@content-desc, "source")]');
-                    if (await sourceField.isExisting()) {
-                        await sourceField.click();
-                        await driver.pause(1000);
-                        await sourceField.setValue(sourceStation);
-                        console.log(`Entered source: ${sourceStation}`);
-                        await driver.pause(1000);
-                        
-                        // Select from suggestions
-                        const sourceSelection = await driver.$(`//android.widget.TextView[contains(@text, "${sourceStation}")]`);
-                        if (await sourceSelection.isExisting()) {
-                            await sourceSelection.click();
-                            console.log('Selected source from suggestions');
-                            await driver.pause(1000);
-                        }
-                    } else {
-                        console.log('Could not find source input field directly, trying enterTextInField utility');                await enterTextInField(driver, 'From', sourceStation, false);
-                await driver.pause(1000);
+                }
                 
-                // Try to select from suggestions
-                await clickElementByText(driver, `${sourceStation}`);
+                // If no source field was found or selection failed, try alternative approaches
+                if (!sourceSelected) {
+                    console.log('Standard source selection failed, trying direct input approach');
+                    
+                    // Try to find any input field and enter text
+                    const inputField = await driver.$('//android.widget.EditText');
+                    if (await inputField.isExisting()) {
+                        await inputField.click();
                         await driver.pause(1000);
+                        await inputField.clearValue();
+                        await driver.pause(500);
+                        await inputField.setValue(sourceStation);
+                        console.log(`Entered source directly: ${sourceStation}`);
+                        await driver.pause(2000);
+                        
+                        // Look for suggestions and click on the first matching one
+                        const suggestions = await driver.$$(`//android.widget.TextView[contains(@text, "${sourceStation}")]`);
+                        if (suggestions.length > 0) {
+                            for (const suggestion of suggestions) {
+                                const isVisible = await suggestion.isDisplayed();
+                                if (isVisible) {
+                                    await suggestion.click();
+                                    console.log('Selected source from suggestions list');
+                                    sourceSelected = true;
+                                    await driver.pause(1500);
+                                    await handlePopups(driver);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // Final fallback: try using our utility function
+                if (!sourceSelected) {
+                    console.log('Using enterTextInField utility as fallback for source station');
+                    await enterTextInField(driver, 'From', sourceStation, false);
+                    await driver.pause(1500);
+                    
+                    // Try clicking on any suggestion
+                    const allTextElements = await driver.$$('//android.widget.TextView');
+                    for (const element of allTextElements) {
+                        try {
+                            const text = await element.getText();
+                            if (text && text.includes(sourceStation)) {
+                                await element.click();
+                                console.log(`Selected suggestion: ${text}`);
+                                sourceSelected = true;
+                                await driver.pause(1500);
+                                await handlePopups(driver);
+                                break;
+                            }
+                        } catch (e) {
+                            // Skip elements that cause errors
+                        }
                     }
                 }
             } catch (error) {
-                console.error('Error while entering source station:', error.message);
-                // Fallback method
-                console.log('Using fallback method for source station entry');
-                await enterTextInField(driver, 'From', sourceStation, false);
-                await driver.pause(1000);
-                await clickElementByText(driver, sourceStation);
+                console.error('Error during source station selection:', error.message);
+                await takeScreenshot(driver, 'source_selection_error');
             }
             
+            // Check for any popups that might appear after source selection
+            await handlePopups(driver);
             await takeScreenshot(driver, 'after_source_input');
             
             // Enter destination station
             console.log('Entering destination station...');
+            let destinationSelected = false;
             
             try {
-                // Check if we need to click a "To" field first
-                const toText = await driver.$('//android.widget.TextView[contains(@text, "To") or contains(@content-desc, "To")]');
-                if (await toText.isExisting() && await toText.isDisplayed()) {
-                    await toText.click();
-                    console.log('Clicked on To field');
-                    await driver.pause(1500);
+                // Take a screenshot before starting destination selection
+                await takeScreenshot(driver, 'before_destination_selection');
+                
+                // First try to locate and click on destination field
+                const destFields = [
+                    '//android.widget.TextView[contains(@text, "To")]',
+                    '//android.widget.TextView[contains(@content-desc, "To")]',
+                    '//android.widget.TextView[contains(@text, "Destination")]'
+                ];
+                
+                for (const destXPath of destFields) {
+                    const destElement = await driver.$(destXPath);
+                    if (await destElement.isExisting() && await destElement.isDisplayed()) {
+                        await destElement.click();
+                        console.log(`Clicked on destination field: ${destXPath}`);
+                        await driver.pause(1500);
+                        
+                        // Use our new station selection handler
+                        destinationSelected = await handleStationSelection(driver, destinationStation, false);
+                        
+                        if (destinationSelected) {
+                            console.log('Destination station selected successfully');
+                            break;
+                        }
+                    }
                 }
                 
-                // Try to find destination input field
-                const destInputField = await driver.$('//android.widget.EditText');
-                if (await destInputField.isExisting()) {
-                    await destInputField.clearValue();
-                    await driver.pause(500);
-                    await destInputField.setValue(destinationStation);
-                    console.log(`Entered destination: ${destinationStation}`);
+                // If no destination field was found or selection failed, try alternative approaches
+                if (!destinationSelected) {
+                    console.log('Standard destination selection failed, trying direct input approach');
+                    
+                    // Try to find any input field and enter text
+                    const inputField = await driver.$('//android.widget.EditText');
+                    if (await inputField.isExisting()) {
+                        await inputField.click();
+                        await driver.pause(1000);
+                        await inputField.clearValue();
+                        await driver.pause(500);
+                        await inputField.setValue(destinationStation);
+                        console.log(`Entered destination directly: ${destinationStation}`);
+                        await driver.pause(2000);
+                        
+                        // Look for suggestions and click on the first matching one
+                        const suggestions = await driver.$$(`//android.widget.TextView[contains(@text, "${destinationStation}")]`);
+                        if (suggestions.length > 0) {
+                            for (const suggestion of suggestions) {
+                                const isVisible = await suggestion.isDisplayed();
+                                if (isVisible) {
+                                    await suggestion.click();
+                                    console.log('Selected destination from suggestions list');
+                                    destinationSelected = true;
+                                    await driver.pause(1500);
+                                    await handlePopups(driver);
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                // Final fallback: try using our utility function
+                if (!destinationSelected) {
+                    console.log('Using enterTextInField utility as fallback for destination station');
+                    await enterTextInField(driver, 'To', destinationStation, false);
                     await driver.pause(1500);
                     
-                    // Try to select from suggestions
-                    const destSelection = await driver.$(`//android.widget.TextView[contains(@text, "${destinationStation}")]`);
-                    if (await destSelection.isExisting()) {
-                        await destSelection.click();
-                        console.log('Selected destination from suggestions');
-                        await driver.pause(1000);
-                    }
-                } else {
-                    // Try specific field locators if direct element not found
-                    console.log('Destination input not found directly, trying alternative approaches');
-                    const destField = await driver.$('//android.widget.EditText[contains(@resource-id, "destination") or contains(@content-desc, "destination")]');
-                    if (await destField.isExisting()) {
-                        await destField.click();
-                        await driver.pause(1000);
-                        await destField.setValue(destinationStation);
-                        console.log(`Entered destination: ${destinationStation}`);
-                        await driver.pause(1000);
-                        
-                        // Select from autocomplete suggestions
-                        const destSelection = await driver.$(`//android.widget.TextView[contains(@text, "${destinationStation}")]`);
-                        if (await destSelection.isExisting()) {
-                            await destSelection.click();
-                            console.log('Selected destination from suggestions');
-                            await driver.pause(1000);
+                    // Try clicking on any suggestion
+                    const allTextElements = await driver.$$('//android.widget.TextView');
+                    for (const element of allTextElements) {
+                        try {
+                            const text = await element.getText();
+                            if (text && text.includes(destinationStation)) {
+                                await element.click();
+                                console.log(`Selected suggestion: ${text}`);
+                                destinationSelected = true;
+                                await driver.pause(1500);
+                                await handlePopups(driver);
+                                break;
+                            }
+                        } catch (e) {
+                            // Skip elements that cause errors
                         }
-                    } else {
-                        console.log('Could not find destination input field directly, trying enterTextInField utility');
-                        await enterTextInField(driver, 'To', destinationStation, false);
-                        await driver.pause(1000);
-                        
-                        // Try to select from suggestions
-                        await clickElementByText(driver, destinationStation);
-                        await driver.pause(1000);
                     }
                 }
             } catch (error) {
-                console.error('Error while entering destination station:', error.message);
-                // Fallback method
-                console.log('Using fallback method for destination station entry');
-                await enterTextInField(driver, 'To', destinationStation, false);
-                await driver.pause(1000);
-                await clickElementByText(driver, destinationStation);
+                console.error('Error during destination station selection:', error.message);
+                await takeScreenshot(driver, 'destination_selection_error');
             }
             
+            // Check for any popups that might appear after destination selection
+            await handlePopups(driver);
             await takeScreenshot(driver, 'after_destination_input');
             
             // Click search/find button - based on inspection we know there's a "Find trains" button
